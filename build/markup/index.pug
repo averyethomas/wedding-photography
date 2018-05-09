@@ -3,7 +3,27 @@ html
     include includes/header.pug
     
     body(ng-app="angularApp" ng-controller="mainCtrl")
-        
-        h1 TEST
-       
-        include includes/footer.pug    
+        div.container
+            h1 Heading 1
+            h2 Heading 2
+            h3 Heading 3
+            h4 Heading 4
+            h5 Heading 5
+            h6 Heading 6
+            p Paragraph
+            a(href="#") Link
+        div.wide-block
+            div.container
+                h4 This is a quote or something
+                p - Something -
+        div.teaser.light.left(style="background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.45)), url('http://averyethomas.com/images/background.JPG') no-repeat 50% 50%; background-size: cover;")
+            div.container
+                div.bordered
+                    div.title
+                        div.bar.left
+                        h3 About
+                        div.bar.right
+                    div.content
+                        p You should probably read this. It's in a box so it's important.  
+
+        include includes/footer.pug

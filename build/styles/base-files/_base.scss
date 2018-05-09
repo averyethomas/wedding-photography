@@ -14,34 +14,86 @@ $white: #ffffff;
 ------------------------------
 */
 
-body, html{
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i|Oswald:700|Sacramento');
+
+$script: 'Sacramento', cursive;
+$serif: 'Lora', serif;
+$sans-serif: 'Oswald', sans-serif;;
+
+body, html {
   font-size: 10px; 
 }
 
+h1, h2, h3, h4, h5, h6, p {
+  margin: 10px auto;
+  padding: 0;
+}
+
+h1, h2, h5, h4, p, a {
+  font-family: $serif;
+}
+
+h3, h6 {
+  font-family: $script;
+}
+
+
+
 h1 {
-
+  font-size: 4.5rem;
+  line-height: 5rem;
 }
+
 h2 {
-
+  font-size: 3.75rem;
+  line-height: 4.3rem;
 }
+
 h3 {
-
+  font-size: 5rem;
+  line-height: 4rem;
+  color: $light;  
 }
+
 h4 {
-
+  font-size: 2.8rem;
+  line-height: 3.6rem;
+  letter-spacing: 0.15rem;
+  color: $dark;
 }
-h5{
 
+h5 {
+  font-size: 2.4rem;
+  line-height: 3rem;
+  color: $dark;
 }
+
 h6 {
-
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.1rem;
+  color: $light;
 }
-p{
 
+p {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  letter-spacing: 0.1rem;
+  color: $dark;
 }
-a{
 
+a {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  text-decoration: none;
+  color: $dark;
+  
+  &:hover {
+    text-decoration: none;
+    color: $highlight;
+  }
 }
+
 /*
 ------------------------------
 03. CONTAINERS
@@ -50,6 +102,9 @@ a{
 
 body{
   .container {
-    
+    width: 100%;
+    max-width: 1024px;
+    padding: 0 15px;
+    margin: 0 auto;
   }
 }

@@ -30,6 +30,7 @@ TABLE OF CONTENTS
 01.STYLE RESET
 ------------------------------
 */
+@import url("https://fonts.googleapis.com/css?family=Lora:400,400i|Oswald:700|Sacramento");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -94,11 +95,72 @@ label:focus,
 body, html {
   font-size: 10px; }
 
+h1, h2, h3, h4, h5, h6, p {
+  margin: 10px auto;
+  padding: 0; }
+
+h1, h2, h5, h4, p, a {
+  font-family: "Lora", serif; }
+
+h3, h6 {
+  font-family: "Sacramento", cursive; }
+
+h1 {
+  font-size: 4.5rem;
+  line-height: 5rem; }
+
+h2 {
+  font-size: 3.75rem;
+  line-height: 4.3rem; }
+
+h3 {
+  font-size: 5rem;
+  line-height: 4rem;
+  color: #cecece; }
+
+h4 {
+  font-size: 2.8rem;
+  line-height: 3.6rem;
+  letter-spacing: 0.15rem;
+  color: #000000; }
+
+h5 {
+  font-size: 2.4rem;
+  line-height: 3rem;
+  color: #000000; }
+
+h6 {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.1rem;
+  color: #cecece; }
+
+p {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  letter-spacing: 0.1rem;
+  color: #000000; }
+
+a {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  text-decoration: none;
+  color: #000000; }
+  a:hover {
+    text-decoration: none;
+    color: #9e9e9e; }
+
 /*
 ------------------------------
 03. CONTAINERS
 ------------------------------
 */
+body .container {
+  width: 100%;
+  max-width: 1024px;
+  padding: 0 15px;
+  margin: 0 auto; }
+
 /*
 ------------------------------
 04. NAVIGATION
@@ -111,11 +173,101 @@ body, html {
 */
 /*
 ------------------------------
-06.SINGLE PAGE
+06.REUSABLE BLOCKS
 ------------------------------
 */
+body .teaser {
+  margin: 10px auto;
+  padding: 5rem 0;
+  background-size: cover;
+  overflow: hidden; }
+  body .teaser.center .container .bordered {
+    margin: 0 auto; }
+    body .teaser.center .container .bordered .content {
+      text-align: center; }
+  body .teaser.left .container .bordered {
+    float: left; }
+    body .teaser.left .container .bordered .title .bar.left {
+      max-width: 40px; }
+    body .teaser.left .container .bordered .content {
+      text-align: left; }
+  body .teaser.right .container .bordered {
+    float: right; }
+    body .teaser.right .container .bordered .title .bar.right {
+      max-width: 40px; }
+    body .teaser.right .container .bordered .content {
+      text-align: right; }
+  body .teaser.dark .container .bordered {
+    border-left: 2px solid #000000;
+    border-right: 2px solid #000000;
+    border-bottom: 2px solid #000000; }
+    body .teaser.dark .container .bordered .title .bar {
+      background-color: #000000; }
+    body .teaser.dark .container .bordered .title h3 {
+      color: #000000; }
+    body .teaser.dark .container .bordered .content p {
+      color: #000000; }
+  body .teaser.light .container .bordered {
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white; }
+    body .teaser.light .container .bordered .title .bar {
+      background-color: white; }
+    body .teaser.light .container .bordered .title h3 {
+      color: white; }
+    body .teaser.light .container .bordered .content p {
+      color: white; }
+  body .teaser .container .bordered {
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    max-width: 500px; }
+    body .teaser .container .bordered .title {
+      display: flex; }
+      body .teaser .container .bordered .title .bar {
+        height: 2px;
+        background-color: black;
+        display: block;
+        width: 100%; }
+      body .teaser .container .bordered .title h3 {
+        line-height: 4rem;
+        position: relative;
+        top: -20px;
+        margin: 0 1rem;
+        text-wrap: no-wrap; }
+    body .teaser .container .bordered .content {
+      padding: 0 40px 25px; }
+
+body .wide-block {
+  padding: 20px;
+  width: 100%;
+  background: no-repeat 50% 50%;
+  background-size: cover;
+  background-image: linear-gradient(-35deg, #ffffff60, #ffffff80), url("https://scontent-atl3-1.cdninstagram.com/vp/c217281fc400df35bb04527af8a56c0f/5B58A7B1/t51.2885-15/e35/28751600_852047191670423_520493063534018560_n.jpg");
+  text-align: center; }
+  body .wide-block h4 {
+    position: relative; }
+    body .wide-block h4:before {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 300px;
+      background: #000000;
+      poistion: relative;
+      top: -20px; }
+
 /*
 ------------------------------
 07.FOOTER
 ------------------------------
 */
+body footer {
+  padding: 10px 0; }
+  body footer .container {
+    text-align: center; }
+    body footer .container p {
+      color: #cecece;
+      font-size: 1.2rem; }
+      body footer .container p span.bar {
+        padding: 0 5px;
+        font-size: 1.5rem; }

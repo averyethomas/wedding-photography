@@ -5,7 +5,6 @@
 04. NAVIGATION
 ------------------------------
 */
-
 body {
  
 }
@@ -22,13 +21,172 @@ body{
 
 /*
 ------------------------------
-06.SINGLE PAGE
+06.REUSABLE BLOCKS
 ------------------------------
 */
 
 body{
-  
+  .teaser {
+    margin: 10px auto;
+    padding: 5rem 0;
+    background-size: cover;
+    overflow: hidden;
+    &.center {
+      .container {
+        .bordered {
+          margin: 0 auto;
+          
+          .content {
+            text-align: center;
+          }
+        }
+      }
+    }
+    &.left {
+      .container {
+        .bordered {
+          float: left;
+          
+          .title {
+            .bar {
+              &.left {
+                max-width: 40px;
+              }
+            }
+          }
+          
+          .content {
+            text-align: left;
+          }
+        }
+      }
+    }   
+    &.right {
+        .container {
+        .bordered {
+          float: right;
+          .title {
+            .bar {
+              &.right {
+                max-width: 40px;
+              }
+            }
+          }
+          
+          .content {
+            text-align: right;
+          }
+        }
+      }
+    }
+    &.dark {
+      .container {
+        .bordered {
+          border-left: 2px solid $dark;
+          border-right: 2px solid $dark;
+          border-bottom: 2px solid $dark;
+          
+          .title {
+            .bar {
+              background-color: $dark;
+            }
+            
+            h3 {
+              color: $dark;
+            }
+          }
+          
+          .content {
+            p {
+              color: $dark;
+            }
+          }
+        }
+      }
+    }
+    
+    &.light {
+      .container {
+        .bordered {
+          border-left: 2px solid white;
+          border-right: 2px solid white;
+          border-bottom: 2px solid white;
+          
+          .title {
+            .bar {
+              background-color: white;
+            }
+            
+            h3 {
+              color: white;
+            }
+          }
+          
+          .content {
+            p {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+    
+    
+    .container {
+      .bordered {
+        border-left: 2px solid black;
+        border-right: 2px solid black;
+        border-bottom: 2px solid black;
+        max-width: 500px;
+        
+        .title {
+          display: flex;
+          
+          .bar {
+            height: 2px;
+            background-color: black;
+            display: block;
+            width: 100%;            
+          }
+          
+          h3 {
+            line-height: 4rem;
+            position: relative;
+            top: -20px;
+            margin: 0 1rem;
+            text-wrap: no-wrap;
+          }
+        }
+        .content {
+          padding: 0 40px 25px;
+        }
+      }
+    }
+  }
+  .wide-block {
+    padding: 20px;
+    width: 100%;
+    background: no-repeat 50% 50%;
+    background-size: cover;
+    background-image: linear-gradient(-35deg, #ffffff60, #ffffff80), url('https://scontent-atl3-1.cdninstagram.com/vp/c217281fc400df35bb04527af8a56c0f/5B58A7B1/t51.2885-15/e35/28751600_852047191670423_520493063534018560_n.jpg');
+    text-align: center;
+    
+    h4 {
+      position: relative;
+      
+      &:before {
+        content: '';
+        display: block;
+        height: 2px;
+        width: 300px;
+        background: $dark;
+        poistion: relative;
+        top: -20px;
+      }
+    }
+  }
 }
+
 /*
 ------------------------------
 07.FOOTER
@@ -37,5 +195,22 @@ body{
 
 body{
   footer {
+    padding: 10px 0;
+    
+    .container {
+      text-align: center;
+      
+      p {
+        color: $light;
+        font-size: 1.2rem;
+        
+        span {
+          &.bar {
+            padding: 0 5px;
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
   }
 }

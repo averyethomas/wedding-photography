@@ -20,4 +20,7 @@ class wp_ng_theme {
 $ngTheme = new wp_ng_theme();
 add_action( 'wp_enqueue_scripts', array( $ngTheme, 'enqueue_scripts' ) );
 
+
+
+
 ?>
